@@ -11,18 +11,19 @@ export const ProjectListScreen = () => {
     name: "",
     personId: "",
   });
+  const debouncedParam = useDebounce(param, 2000);
   const [list, setList] = useState([]);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch(`${apiUrl}/projects?${qs.stringify(cleanObject(param))}`).then(
-      async (response) => {
-        if (response.ok) {
-          setList(await response.json());
-        }
+    fetch(
+      `${apiUrl}/projects?${qs.stringify(cleanObject(debouncedParam))}`
+    ).then(async (response) => {
+      if (response.ok) {
+        setList(await response.json());
       }
-    );
-  }, [param]);
+    });
+  }, [debouncedParam]);
 
   useEffect(() => {
     fetch(`${apiUrl}/users`).then(async (response) => {
@@ -38,4 +39,14 @@ export const ProjectListScreen = () => {
       <List list={list} users={users} />
     </div>
   );
+};
+
+export const useDebounce = (value, delay) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  useEffect(() => {
+    const timeout = setTimeout(() => setDebouncedValue(value), delay);
+    return () => clearTimeout(timeout);
+  }, [value, delay]);
+
+  return debouncedValue;
 };
