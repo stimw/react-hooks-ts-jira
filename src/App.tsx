@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectListScreen } from "./screens/ProjectListScreen";
+import { ProjectListScreen } from "./screens/ProjectListScreen/ProjectListScreen";
 
 function App() {
   return (

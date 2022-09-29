@@ -9,6 +9,7 @@ specifiers:
   '@testing-library/user-event': ^13.5.0
   '@types/jest': ^27.5.2
   '@types/node': ^16.11.62
+  '@types/qs': ^6.9.7
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   '@types/testing-library__jest-dom': ^5.14.5
@@ -46,6 +47,7 @@ devDependencies:
   '@babel/core': 7.19.3
   '@babel/eslint-parser': 7.19.1_ogeofmzlraie6c2b5yqacorv6u
   '@babel/preset-react': 7.18.6_@babel+core@7.19.3
+  '@types/qs': 6.9.7
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.38.1_c7qepppml3d4ahu5cnfwqe6ltq
   '@typescript-eslint/parser': 5.38.1_ypn2ylkkyfa5i233caldtndbqa
@@ -2394,7 +2396,6 @@ packages:
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
-    dev: false
 
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
